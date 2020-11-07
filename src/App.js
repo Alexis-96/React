@@ -1,9 +1,21 @@
-import logo from './logo.svg';
+import { useEffect } from 'react';
 import './App.css';
+import Root from './pages/root';
+import setUpAxios from './config/axios';
+
 
 function App() {
+
+  useEffect(()=>{
+    setUpAxios()
+  },[]);
   return (
     <div className="App">
+      <Root/>
+    </div>
+    
+
+    /*<div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
@@ -18,7 +30,7 @@ function App() {
           Learn React
         </a>
       </header>
-    </div>
+    </div>*/
   );
 }
 
